@@ -3,23 +3,28 @@
 # Script pour changer de compte Git
 # Usage: git_switcher.sh <nom_du_compte>
 set -o allexport
-source ./.switcher.env
+source .switcher.env
 set +o allexport
+
+
+# Fonction pour demander à l'utilisateur de saisir une valeur
+function prompt_user {
+    local message=$1
+    local input
+
+    read -p "$message: " input
+    echo $input
+}
 
 if [ "$account1" == "" ] || [ "$account2" == "" ]; then
     echo "Let's define together the accounts you want to switch between."
-    echo "Please enter the first account name:"
-    read account1
-    echo "Please enter the first account email:"
-    read account1_mail
-    echo "Please enter the first account ssh key absolute path:"
-    read account1_ssh
-    echo "Please enter the second account name:"
-    read account2
-    echo "Please enter the second account email:"
-    read account2_mail
-    echo "Please enter the second account ssh key absolute path:"
-    read account2_ssh
+    lang=$(prompt_user "Please enter the language you want to use (en or fr):")
+    account1=$(prompt_user "Please enter the first account name:")
+    account1_mail=$(prompt_user "Please enter the first account email:")
+    account1_ssh=$(prompt_user "Please enter the first account SSH key path:")
+    account2=$(prompt_user "Please enter the second account name:")
+    account2_mail=$(prompt_user "Please enter the second account email:")
+    account2_ssh=$(prompt_user "Please enter the second account SSH key path:")
     echo "account1=$account1" > .switcher.env
     echo "account1_mail=$account1_mail" >> .switcher.env
     echo "account1_ssh=$account1_ssh" >> .switcher.env
