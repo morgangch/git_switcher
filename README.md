@@ -15,8 +15,9 @@ If you do not want to setup it manually, you can also execute it for the first t
 
 ## How can you run it ?
 Simple as that, once the script is setup, the datas are given, you only need to run it this way :
-[path_to_program].sh [account(1 or 2)]
-Example : ./git_switcher.sh Morgan
+
+**[path_to_program].sh [account(1 or 2)]**
+**Example : ./git_switcher.sh Morgan**
 And that's all.
 
 # :fr: git_switcher
@@ -36,6 +37,7 @@ Si vous voulez éviter de mettre le programme en place à la main, vous pouvez e
 
 ## Comment lancer le programme ?
 Une fois le script mis en place, il suffit de le lancer de la façon suivante :
-[chemin_du_programme].sh [compte(1 ou 2)]
-Exemple : ./git_switcher.sh Morgan
+
+**[chemin_du_programme].sh [compte(1 ou 2)]**
+**Exemple : ./git_switcher.sh Morgan**
 Et c'est tout !
