@@ -53,6 +53,7 @@ account2_mail="[X]"
 account2_ssh="[X]"
 
 Si vous voulez éviter de mettre le programme en place à la main, vous pouvez exécuter le script une première fois, il lancera alors une série de questions pour créer le fichier avec les bonnes données.
+Je recommande d'ailleurs de mettre ce dossier entièrement dans la variable d'environnement "PATH" afin d'éviter des bugs inutiles (notamment à cause de l'utilisation du fichier .env)
 
 ## Comment lancer le programme ?
 Une fois le script mis en place, il suffit de le lancer de la façon suivante :
